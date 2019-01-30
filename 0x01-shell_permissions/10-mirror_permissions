@@ -1,2 +1,2 @@
 #!/bin/bash
-cp —preserve=mode olleh hello
+cp --preserve=mode olleh hello

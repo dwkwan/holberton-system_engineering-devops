@@ -1,2 +1,2 @@
 #!/bin/bash
-file -C [-m ] off_t lseek(off_t 0)
+file -C HolbertonMagic off_t lseek(off_t 0)

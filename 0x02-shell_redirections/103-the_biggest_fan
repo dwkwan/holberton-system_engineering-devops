@@ -1,0 +1,2 @@
+#!/bin/bash
+sort nasa_19950801.tsv | cut -f 1 | uniq -dc | sort -g | tail -11 | rev | cut -d ' ' -f 1 | rev | tac

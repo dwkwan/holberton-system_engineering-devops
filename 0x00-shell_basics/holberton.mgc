@@ -1,2 +1,1 @@
-#!/bin/bash
-file -C HolbertonMagic off_t lseek(off_t 0)
+0 search/10 Holberton File containing "HOLBERTON"

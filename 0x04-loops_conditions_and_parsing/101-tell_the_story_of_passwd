@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# This script is displaying the contents of etc/passwd using while loop + IFS
 IFS=':'
 while read -r USERNAME PASSWORD USERID GROUPID USERIDINFO HOME COMMANDSHELL
 do

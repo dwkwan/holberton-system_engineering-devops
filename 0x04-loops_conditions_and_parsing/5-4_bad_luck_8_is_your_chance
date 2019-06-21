@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script is displaying diff strings using while loop and if conditions
+i=1
+while [ $i -le 10 ]
+do
+    if [ $i = 4 ]
+    then
+        echo "bad luck"
+    elif [ $i = 8 ]
+    then
+	echo "good luck"
+    else
+	echo "Holberton School"
+    fi
+    i=$((i = i + 1))
+done

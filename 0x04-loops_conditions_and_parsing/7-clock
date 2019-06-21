@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# This script is displaying hours 0-12 and mins 1-59 using nested while loops
 i=0
 while [ $i -le 12 ]; do
     echo "Hour:" $i

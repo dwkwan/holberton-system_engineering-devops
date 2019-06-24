@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #This script is displaying To infinity and beyond indefinitely and catching SIGTERM
-trap "echo I am invicible!!" SIGTERM
+trap "echo I am invicible!!!" SIGTERM
 i=1
 while [ $i ]
 do

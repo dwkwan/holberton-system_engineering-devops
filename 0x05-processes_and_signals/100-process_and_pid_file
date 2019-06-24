@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#This script is displaying To infinity and handles different signals
+touch /var/run/holbertonscript.pid
+su -c "$./var/run/holbertonscript.pd >/dev/null 2>&1 &"
+pid=$$
+echo $pid > /var/run/holbertonscript.pid
+trap "echo I hate the kill command && rm /var/run/holbertonscript.pid && exit" SIGTERM
+trap "echo Y U no love me?!" SIGINT
+trap "rm /var/run/holbertonscript.pid && exit" SIGQUIT
+i=1
+while [ $i ]
+do
+    echo "To infinity and beyond"
+    sleep 2
+done

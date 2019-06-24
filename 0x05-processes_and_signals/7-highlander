@@ -1,4 +1,4 @@
-0;95;0c#!/usr/bin/env bash
+#!/usr/bin/env bash
 #This script is displaying To infinity and beyond indefinitely and catching SIGTERM
 trap "echo I am invincible!!!" SIGTERM
 i=1

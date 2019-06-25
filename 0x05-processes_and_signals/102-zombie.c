@@ -15,7 +15,7 @@ void createzombie(void)
 	if (fork() == 0)
 	{
 		my_pid = getpid();
-		printf("Zombie process created, %u\n", my_pid);
+		printf("Zombie process created, PID: %u\n", my_pid);
 		exit(0);
 	}
 }

@@ -37,7 +37,7 @@ int infinite_while(void)
  *
  * Return: nothing
  */
-void main(void)
+int main(void)
 {
 	int i;
 
@@ -48,4 +48,5 @@ void main(void)
 		i++;
 	}
 	infinite_while();
+	return (0);
 }

@@ -11,7 +11,7 @@ Diagrams of web stacks with different functionalities.
 ---
 
 ### [0. Simple web stack](./0-simple_web_stack)
-* A simple web stack with a single server that hosts the website reachable via  www.foobar.com
+* A simple web stack with a single server that hosts the website reachable via  www.foobar.com.
 
 
 ### [1. Distributed web infrastructure](./1-distributed_web_infrastructure)

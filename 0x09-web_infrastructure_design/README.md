@@ -1,12 +1,12 @@
 # 0x09. Web infrastructure design
 
-## Description
-What you should learn from this project:
+## About
+Diagrams of web stacks with different functionalities.
 
-* You must be able to draw a diagram covering the web stack you built with the sysadmin/devops track projects
-* You must be able to explain what each component is doing
-* You must be able to explain system redundancy
-* Know all the mentioned acronyms: LAMP, SPOF, QPS
+* Diagrams covering the web stack built with the sysadmin/devops track projects
+* Showing each necessary component
+* Showing system redundancy
+* Showing understanding of acronyms: LAMP, SPOF, QPS
 
 ---
 

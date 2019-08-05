@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# uses ssh to connect to your server using private key and user ubuntu
+chmod 600 ~/.ssh/holberton
+ssh -i ~/.ssh/holberton ubuntu@34.74.176.216

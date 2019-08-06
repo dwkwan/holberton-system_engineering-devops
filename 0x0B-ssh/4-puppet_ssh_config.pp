@@ -9,5 +9,4 @@ file_line { 'ssh_config_2':
     path     => '/etc/ssh/ssh_config',
     match    => 'IdentityFile',
     line     => 'IdentityFile ~/.ssh/holberton',
-    multiple => 'true'
 }

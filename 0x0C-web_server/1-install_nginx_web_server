@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 #installs nginx, listens on port 80, and returns a page with a string
-apt-get update
 apt-get -y install nginx
 ufw allow 'Nginx HTTP'
-echo "<p>Holberton School</p>" > /var/www/html/index.nginx-debian.html
+echo "Holberton School" > /var/www/html/index.nginx-debian.html

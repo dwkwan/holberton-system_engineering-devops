@@ -19,4 +19,4 @@ printf "server {
                                         }" > /etc/nginx/sites-available/redirect_me.conf
 ln -s /etc/nginx/sites-available/redirect_me.conf /etc/nginx/sites-enabled/redirect_me.conf
 nginx -t
-service nginx start
+service nginx restart

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#installs Haproxy and setups load balancer with round robin algorithm
+#apt-get update
+#apt-get install haproxy
+printf "backend web_servers
+    mode http
+    balance roundrobin
+    option forwardfor
+    http-request set-header X-Forwarded-Port %%[dst_port]
+    http-request add-header X-Forwarded-Proto https if { ssl_fc }
+    option httpchk HEAD / HTTP/1.1rnHost:localhost
+    server 692-web-01  34.74.176.216:80
+    server 692-web-02  34.74.12.104:80" >> /etc/haproxy/haproxy.cfg

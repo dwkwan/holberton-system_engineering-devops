@@ -11,3 +11,4 @@ printf "backend web_servers
     option httpchk HEAD / HTTP/1.1rnHost:localhost
     server 692-web-01  34.74.176.216:80
     server 692-web-02  34.74.12.104:80" >> /etc/haproxy/haproxy.cfg
+service nginx start

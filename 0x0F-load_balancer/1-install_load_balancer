@@ -2,7 +2,7 @@
 #installs Haproxy and setups load balancer with round robin algorithm
 apt-get update
 apt-get install haproxy
-printf "frontend holberton
+printf "\n frontend holberton
     bind *:80
     mode http
     default_backend web_servers

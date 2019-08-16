@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#creates a symbolic link to configure Nginx server and restarts it
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart

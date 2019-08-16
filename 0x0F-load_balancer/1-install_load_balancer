@@ -10,6 +10,6 @@ printf "frontend holberton
 backend web_servers
     mode http
     balance roundrobin
-    server 692-web-01  34.74.176.216:80
-    server 692-web-02  34.74.12.104:80" >> /etc/haproxy/haproxy.cfg
+    server 692-web-01  34.74.176.216
+    server 692-web-02  34.74.12.104" >> /etc/haproxy/haproxy.cfg
 service haproxy start

@@ -12,17 +12,16 @@ def recurse(subreddit, hot_list=[], after=None):
     }
     r = requests.get('https://www.reddit.com/r/{:}/hot.json?after={:}'.format(
         subreddit, after), headers=headers, allow_redirects=False)
-    if r.status_code < 300:
+    if r.status_code == 200:
         json = r.json()
         data_dict = json.get('data')
+        post_list = data_dict.get('children')
+        for post in post_list:
+            post_data_dict = post.get('data')
+            hot_list.append(post_data_dict.get('title'))
+        after = data_dict.get('after')
         if data_dict.get('after') is None:
             return hot_list
-        else:
-            post_list = data_dict.get('children')
-            for post in post_list:
-                post_data_dict = post.get('data')
-                hot_list.append(post_data_dict.get('title'))
-            after = data_dict.get('after')
-            return recurse(subreddit, hot_list, after)
+        return recurse(subreddit, hot_list, after)
     else:
         return None

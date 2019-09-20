@@ -22,8 +22,10 @@ def count_words(subreddit, word_list=[], word_dict={}, after=None):
             post_data_dict = post.get('data')
             for word in word_list:
                 title = post_data_dict.get('title').split()
-                count = title.count(word.capitalize())
-                count += title.count(word.lower())
+                title_copy = []
+                for j in title:
+                    title_copy.append(j.upper())
+                count = title_copy.count(word.upper())
                 if word_dict.get(word):
                     word_dict[word] += count
                 else:
@@ -37,9 +39,9 @@ def count_words(subreddit, word_list=[], word_dict={}, after=None):
                     if sorted_list[i][1] > sorted_list[i+1][1]:
                         sorted_list[i], sorted_list[i+1] = sorted_list[i+1],
                         sorted_list[i]
-            for i in sorted_list:
-                if i[1] > 0:
-                    print("{:}: {:}".format(i[0], i[1]))
+            for item in sorted_list:
+                if item[1] > 0:
+                    print("{:}: {:}".format(item[0], item[1]))
             return
         return count_words(subreddit, word_list, word_dict, after)
     else:

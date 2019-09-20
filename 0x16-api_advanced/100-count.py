@@ -32,6 +32,11 @@ def count_words(subreddit, word_list=[], word_dict={}, after=None):
         if data_dict.get('after') is None:
             sorted_list = sorted(word_dict.items(), key=operator.itemgetter(1),
                                  reverse=True)
+            for i in range(len(sorted_list) - 1):
+                if sorted_list[i][1] == sorted_list[i+1][1]:
+                    if sorted_list[i][1] > sorted_list[i+1][1]:
+                        sorted_list[i], sorted_list[i+1] = sorted_list[i+1],
+                        sorted_list[i]
             for i in sorted_list:
                 if i[1] > 0:
                     print("{:}: {:}".format(i[0], i[1]))

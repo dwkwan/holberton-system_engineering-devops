@@ -21,8 +21,9 @@ def count_words(subreddit, word_list=[], word_dict={}, after=None):
         for post in post_list:
             post_data_dict = post.get('data')
             for word in word_list:
-                count = post_data_dict.get('title').count(word.capitalize())
-                count += post_data_dict.get('title').count(word.lower())
+                title = post_data_dict.get('title').split()
+                count = title.count(word.capitalize())
+                count += title.count(word.lower())
                 if word_dict.get(word):
                     word_dict[word] += count
                 else:

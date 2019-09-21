@@ -36,9 +36,9 @@ def count_words(subreddit, word_list=[], word_dict={}, after=None):
                                  reverse=True)
             for i in range(len(sorted_list) - 1):
                 if sorted_list[i][1] == sorted_list[i+1][1]:
-                    if sorted_list[i][1] > sorted_list[i+1][1]:
-                        sorted_list[i], sorted_list[i+1] = sorted_list[i+1],
-                        sorted_list[i]
+                    if sorted_list[i][0] > sorted_list[i+1][0]:
+                        sorted_list[i], sorted_list[i+1] = sorted_list[
+                            i+1], sorted_list[i]
             for item in sorted_list:
                 if item[1] > 0:
                     print("{:}: {:}".format(item[0], item[1]))

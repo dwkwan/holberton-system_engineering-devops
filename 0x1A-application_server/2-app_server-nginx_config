@@ -1,3 +1,4 @@
+# Sets up reverse proxy to Gunicorn
 server {
        listen 80;
        server_name _;

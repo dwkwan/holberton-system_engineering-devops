@@ -1,8 +1,12 @@
 server {
        listen 80;
        server_name _;
+       root /home/ubuntu/AirBnB_clone_v4/web_dynamic/;
        location / {
                 proxy_pass http://127.0.0.1:5003/2-hbnb/;
-                root /static;
-                     }
+                }
+        location /static/ {}
+        location /api/ {
+                            include proxy_params;
+                            proxy_pass http://127.0.0.1:5002; }
 }

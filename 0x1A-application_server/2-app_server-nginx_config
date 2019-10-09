@@ -1,4 +1,4 @@
-# Sets up reverse proxy to Gunicorn
+# Sets up NGINX so that the /airbb-onepage/ route points to Gunicorn instance listening on port 5000
 server {
        listen 80;
        server_name _;
